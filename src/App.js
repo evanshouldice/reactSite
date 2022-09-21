@@ -16,9 +16,53 @@ function App() {
               setRole(e.target.value);
           }}
         />
-          <Employee name="Evan" role="Intern"/>
-          <Employee name="Evan" role={role}/>
-          <Employee name="Evan"/>
+          <div className="flex flex-wrap justify-center">
+          <Employee 
+            name="Evan" 
+            role="Intern" 
+            img="https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
+          />
+          <Employee 
+            name="Evan" 
+            role="Intern" 
+            img="https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
+          />
+          <Employee 
+            name="Evan" 
+            role="Intern" 
+            img="https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
+          />
+          <Employee 
+            name="Evan" 
+            role="Intern" 
+            img="https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
+          />
+          <Employee 
+            name="Evan" 
+            role="Intern" 
+            img="https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
+          />
+          <Employee 
+            name="Evan" 
+            role="Intern" 
+            img="https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
+          />
+          <Employee 
+            name="Evan" 
+            role="Intern" 
+            img="https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
+          />
+          <Employee 
+            name="Evan" 
+            role="Intern" 
+            img="https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
+          />
+          <Employee 
+            name="Evan" 
+            role="Intern" 
+            img="https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
+          />
+          </div>
         </>
       :
         <p>You cannot see the employees</p>
