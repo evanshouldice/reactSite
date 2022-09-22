@@ -1,9 +1,44 @@
 import './index.css';
 import Employee from './components/Employee';
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
   const [role, setRole] = useState('dev');
+  const [employees, setEmployees] = useState(
+    [
+      {
+        name: "Evan", 
+        role: "Developer", 
+        img: "https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
+      },
+      {
+        name: "Bob", 
+        role: "Manager", 
+        img: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      },
+      {
+        name: "Andrea", 
+        role: "Developer", 
+        img: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      },
+      {
+        name: "Justin", 
+        role: "UI Designer", 
+        img: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      },
+      {
+        name: "Annie", 
+        role: "Front-end Developer", 
+        img: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      },
+      {
+        name: "Hannah", 
+        role: "Project Manager", 
+        img: "https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      }
+    ]
+  );
   const showEmployees = true;
   return (
     <div className="App">
@@ -17,51 +52,18 @@ function App() {
           }}
         />
           <div className="flex flex-wrap justify-center">
-          <Employee 
-            name="Evan" 
-            role="Intern" 
-            img="https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
-          />
-          <Employee 
-            name="Evan" 
-            role="Intern" 
-            img="https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
-          />
-          <Employee 
-            name="Evan" 
-            role="Intern" 
-            img="https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
-          />
-          <Employee 
-            name="Evan" 
-            role="Intern" 
-            img="https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
-          />
-          <Employee 
-            name="Evan" 
-            role="Intern" 
-            img="https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
-          />
-          <Employee 
-            name="Evan" 
-            role="Intern" 
-            img="https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
-          />
-          <Employee 
-            name="Evan" 
-            role="Intern" 
-            img="https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
-          />
-          <Employee 
-            name="Evan" 
-            role="Intern" 
-            img="https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
-          />
-          <Employee 
-            name="Evan" 
-            role="Intern" 
-            img="https://images.pexels.com/photos/1751542/pexels-photo-1751542.jpeg?cs=srgb&dl=pexels-laura-stanley-1751542.jpg&fm=jpg"
-          />
+            {employees.map((employee) => {
+              console.log(employee);
+              return (
+                <Employee 
+                  key={uuidv4()}
+                  name={employee.name}
+                  role={employee.role}
+                  img={employee.img}
+                />
+              );
+              
+            })}
           </div>
         </>
       :
